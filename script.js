@@ -1,22 +1,22 @@
-// $(".flex-slide").each(function(){
-//     $(this).hover(function(){
-//         $(this).find('.flex-title').css({
-//             transform: 'rotate(0deg)',
-//             top: '10%'
-//         });
-//         $(this).find('.flex-about').css({
-//             opacity: '1'
-//         });
-//     }, function(){
-//         $(this).find('.flex-title').css({
-//             transform: 'rotate(90deg)',
-//             top: '15%'
-//         });
-//         $(this).find('.flex-about').css({
-//             opacity: '0'
-//         });
-//     })
-// });
+//  $(".flex-slide").each(function(){
+//      $(this).hover(function(){
+//          $(this).find('.flex-title').css({
+//              transform: 'rotate(0deg)',
+//              top: '10%'
+//          });
+//          $(this).find('.flex-about').css({
+//              opacity: '1'
+//          });
+//      }, function(){
+//          $(this).find('.flex-title').css({
+//              transform: 'rotate(90deg)',
+//              top: '15%'
+//          });
+//          $(this).find('.flex-about').css({
+//              opacity: '0'
+//          });
+//      })
+//  });
 
 
 const backgroundScroll = document.querySelector(".main-content");
@@ -37,7 +37,7 @@ window.addEventListener("scroll", ()=> {
     header.style.transform = `translateY(-105%)`;
   }
 
-  
+
 })
 
 
@@ -56,7 +56,7 @@ document.addEventListener("scroll", (event) => {
     //  backgroundScroll.style.margin = "0";
 
    }
-  	
+
 
 
  })
