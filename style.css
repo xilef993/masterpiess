@@ -61,7 +61,6 @@ button {
 header {
   width: 100%;
   top: 0;
-  height: 0;
   /* var(--header-height); */
   /* background-color: #ff8128; */
 }
