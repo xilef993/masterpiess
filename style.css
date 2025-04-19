@@ -186,44 +186,7 @@ header .logo .title {
 /* ======== Mission ======== */
 
 
- .mission {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-}
-.mission .outer-wrapper{
-  margin: 150px auto;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  background-color: #00296c;
-  width: 70%;
-}
-
-
-
-
-.mission .outer-wrapper img{
-  max-width: 400px;
-  float: left;
-}
-
-.mission .outer-wrapper .text-mission{
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  width: 50%;
-  height: 100%;
-}
-
-.mission .outer-wrapper .text-mission h1{
- font-size: 42px;
-}
-
-.mission .outer-wrapper .text-mission p{
-  font-size: 18px;
- }
 
 /* ======== CARDS ======== */
 
@@ -240,8 +203,8 @@ header .logo .title {
 
 .card-wrapper .card {
 /* width: 350px; */
-width: 25%;
-height: 525px;
+min-width: 50px;
+height: 425px;
 margin: 1rem;
 overflow: hidden;
 position: relative;
