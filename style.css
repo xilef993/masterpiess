@@ -67,22 +67,16 @@ section {
 
 /* ======== HEADER ======== */
 
-header {
-  width: 100%;
-  top: 0;
-  height: 0;
-  /* var(--header-height); */
-  /* background-color: #ff8128; */
-}
 
-header .logo {
+
+.nav-bar .logo {
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header .logo .title {
+.nav-bar .logo .title {
   padding: 5px;
   font-size: xx-large;
   color: var(--hamburger-color);
@@ -91,6 +85,7 @@ header .logo .title {
 /* ======== NAV BAR ======== */
 .nav-bar {
   position: fixed;
+  transform: translate(0, -105%);
   /* background-color: #f7ae4e; */
   /* background-color: var(--header-color); */
   top: 0px;
@@ -185,7 +180,7 @@ header .logo .title {
   display: block;
 } */
 
-.video-overlay-svg {
+/* .video-overlay-svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -193,15 +188,42 @@ header .logo .title {
   z-index: 10;
   width: 60%;
   max-width: 600px;
-  aspect-ratio: 16 / 9; /* oder andere passende Ratio */
+  aspect-ratio: 16 / 9; 
   pointer-events: none;
 }
 
-.video-overlay-svg embed {
+.video-overlay-svg iframe {
   width: 100%;
   height: 100%;
-  display: block;
   border: none;
+  display: block;
+  pointer-events: none; 
+  background-color: transparent;
+} */
+
+.video-overlay-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+}
+
+.video-overlay-text h1 {
+  font-size: 3rem;
+  letter-spacing: 9px;
+  font-size: 10rem;
+  margin-bottom: 0.5rem;
+  color: #FF7A29;
+}
+
+.video-overlay-text p {
+  font-size: 2.5rem;
+  color: #FF7A29;
 }
 
 /* ======== Mission ======== */
