@@ -1,5 +1,6 @@
 /* ======== IMPORTS ======== */
 @import url('https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=League Spartan');
 
 
 /* reset styling */
@@ -45,9 +46,10 @@ button {
   background-color: var(--background-color);
   /* font-family: "Helvetica", Sans-Serif; */
     /* font-family: "Taviraj", serif; */
-    font-family: "Source Sans Pro", Serif;
+    font-family: "League Spartan", Serif;
     font-weight: 400;
     font-style: normal;
+    min-height: 100vh;
  }
 
 hr {
@@ -149,34 +151,76 @@ header .logo .title {
 }
 
 
+/* ======= VIDEO ======= */
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.video-frontpage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.video-overlay-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  padding: 1rem 2rem;
+  /*background: rgba(0, 0, 0, 0.4);  optional: halbtransparentes Overlay */
+  border-radius: 12px;
+  font-family: 'League Spartan';
+}
+
+.video-overlay-text h1 {
+  font-size: 11rem;
+  margin-bottom: 0.5rem;
+  color: #FF7A29;
+  letter-spacing: 9px;
+
+}
+
+.video-overlay-text p {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #FF7A29;
+}
+
+
+
+
 /* ======== Mission ======== */
 
 
-.mission {
-  padding: 5rem;
-  display: flex;
-  justify-content: end;
-
-}
-.mission .outer-wrapper{
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #00296c;
-}
-
-
-
-.mission .outer-wrapper .picture-mission{
-  width: 50%;
+ .mission {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
-.mission .outer-wrapper .picture-mission img{
-  width: auto;
-  height: 100%;
+.mission .outer-wrapper{
+  margin: 150px auto;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: #00296c;
+  width: 70%;
+}
+
+
+
+
+.mission .outer-wrapper img{
+  max-width: 400px;
+  float: left;
 }
 
 .mission .outer-wrapper .text-mission{
@@ -187,6 +231,13 @@ header .logo .title {
   height: 100%;
 }
 
+.mission .outer-wrapper .text-mission h1{
+ font-size: 42px;
+}
+
+.mission .outer-wrapper .text-mission p{
+  font-size: 18px;
+ }
 
 /* ======== CARDS ======== */
 
@@ -194,7 +245,7 @@ header .logo .title {
 .card-wrapper {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
   margin: 7rem;
   align-items: baseline;
@@ -272,7 +323,7 @@ transform: translateX(-100%);
  .card:hover .card-main-content {
    /* left: 0;  */
    transform: translateX(-100%);
-  } 
+  }
 
 .card .overlay-content p {
 text-align: center;
@@ -310,7 +361,7 @@ margin-top: 1.25rem;
   display: flex;
   justify-content: center;
   align-self: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   flex-direction: column;
   /* background-position: center;
   background-image: url(images/background-1747791_1920.jpg);
@@ -322,7 +373,7 @@ margin-top: 1.25rem;
 .main-content section {
   transition: all 0.5s ease;
    /* display: flex;
-   align-items: center; 
+   align-items: center;
    justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;  */
@@ -405,7 +456,7 @@ margin-top: 1.25rem;
  }
 
 .hamburger span:nth-child(1){
-  top: 25%; 
+  top: 25%;
   transition: 0.5s ease-in-out;
  }
 
@@ -443,12 +494,73 @@ margin-top: 1.25rem;
 }
 
 .btn-book:hover {
-  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,41,108,0); 
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,41,108,0);
 box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,41,108,0);
   color: #00296c;
   cursor: pointer;
   transition: .15s ease-in-out;
 }
+
+
+
+
+
+
+.image-text-float-section {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.image-text-float-wrapper {
+  max-width: 60%;
+  width: 100%;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--font-color);
+  position: relative;
+}
+
+.float-image {
+  float: left;
+  width: 300px;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  shape-outside: margin-box;
+}
+
+
+@media screen and (max-width: 768px) {
+  .float-image {
+    float: none;
+    display: block;
+    margin: 0 auto 2rem auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .image-text-float-wrapper {
+    text-align: left;
+  }
+
+  .image-text-float-wrapper h2 {
+    text-align: left;
+  }
+}
+
+
+.image-text-float-wrapper p {
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
 
 /* ======== MEDIA QUERIES ======== */
 
@@ -457,39 +569,19 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,41,108,0);
   .main-content .card-wrapper .card {
     /* background: #e0e0e0; */
     padding: 20px;
-    margin-bottom: 2rem;  
+    margin-bottom: 2rem;
     margin-bottom: 1rem;
     border-radius: 25px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  
-  /* .main-content .Talentmanagement .description {
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .main-content .Talentmanagement .picTalent {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-  }
 
-  .main-content .Talentmanagement .picTalent .picture {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-image: url(images/pexels-nappy-935977.jpg);
-    background-size: cover;
-    border-radius: 25px;
-  } */
-  
-  
+
    .nav-bar .hamburger{
     display: block;
   }
-  
+
   .nav-bar ul {
     transition: translate 0.5s ease-in-out;
     translate: 200%;
@@ -508,17 +600,17 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,41,108,0);
     /* opacity: 0.83; */
     background: var(--description-color);
   }
-  
+
   /* https://mitrich.medium.com/how-to-change-one-element-on-a-second-element-hover-with-css-sass-e84856b15347 */
   body:has(.hamburger.active) .nav-bar ul {
    translate: 0%;
   }
-  
+
   /* body:has(.hamburger.active) .main-content section{
     margin-right: 10rem;
    } */
-  
-  } 
+
+  }
 
   @media (max-width: 576px) {
     .card {
@@ -526,3 +618,4 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,41,108,0);
       height: 450px;
     }
   }
+
