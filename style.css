@@ -15,7 +15,7 @@
 :root {
   --header-height: 70px;
   --hamburger-height: 50px;
-  --hamburger-color: black;
+  --hamburger-color: #2F2F2F;
   --background-color: white;
   --header-color: #fcc47afa;
   --header-font-color: grey;
@@ -155,7 +155,7 @@ section {
 }
 
 /* ========== MAIN CONTENT ========== */
-.main-content {
+/* .main-content {
   position: absolute;
   width: 100%;
   padding: 20px;
@@ -169,7 +169,37 @@ section {
 .main-content section {
   width: 95vw;
   transition: all 0.5s ease;
+} */
+
+
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
 }
+
+.services .introduction-text {
+display: flex;
+justify-content: space-between;
+width: 60vw;
+margin-bottom: 1rem;
+}
+
+.services .introduction-text h1 {
+  display: flex;
+  justify-content: left;
+  width: 20%;
+}
+.services .introduction-text p {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
 
 /* ========== CARDS ========== */
 .card-wrapper {
@@ -177,7 +207,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  margin: 9rem auto;
+  /* margin: 9rem auto; */
   width: 60vw;
 }
 
@@ -193,6 +223,8 @@ section {
   width: 100%;
   height: 100%;
   transition: 0.6s;
+  background-color: #e02872;
+
 }
 
 .card-main-content img {
@@ -202,6 +234,20 @@ section {
   object-position: center;
   display: block;
   -webkit-transform: translateZ(0); /* Safari rendering fix */
+  filter: blur(50%);
+}
+
+.card-wrapper .card .card-main-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #D9D4CC;
+  opacity: 0.5; /* Stärke des Filters */
+  pointer-events: none; /* damit es nicht anklickbar ist */
+  z-index: 1;
 }
 
 .card-main-content .centered {
@@ -213,6 +259,7 @@ section {
   text-transform: uppercase;
   color: black;
   transition: 0.6s;
+  z-index: 2;
 }
 
 .overlay-content {
@@ -233,6 +280,11 @@ section {
   z-index: 1;
 }
 
+.overlay-content h3{
+margin-top: 10px;
+ width: 80%;
+}
+
 .card:hover .overlay-content,
 .card:hover .card-main-content {
   transform: translateX(-100%);
@@ -246,18 +298,13 @@ section {
   line-height: 1.75rem;
 }
 
-.overlay-content p span {
-  display: block;
-  font-size: 1rem;
-  font-style: italic;
-  margin-top: 1.25rem;
-}
+
 
 /* ========== IMAGE TEXT FLOAT SECTION ========== */
 .image-text-float-section {
   display: flex;
   justify-content: center;
-  padding: 4rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .image-text-float-wrapper {
@@ -267,18 +314,27 @@ section {
   font-size: 1.125rem;
   line-height: 1.6;
   position: relative;
+  background-color:    #D9D4CC;
 }
 
 .float-image {
   float: left;
-  width: 300px;
+  width: 400px;
   margin: 0 2rem 1rem 0;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   shape-outside: margin-box;
+}
+
+.image-text-float-wrapper h2 {
+  text-align: justify;
+  padding-top: 50px;
+
 }
 
 .image-text-float-wrapper p {
   text-align: justify;
+  padding-right: 30px;
+  padding-bottom: 50px;
 }
 
 /* ========== SCROLL-EFFEKTE ========== */
@@ -385,4 +441,21 @@ section {
     width: 300px;
     height: 450px;
   }
+  .image-text-float-section {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem;
+    width: 100vw;
+  }
+  
+  .image-text-float-wrapper {
+    max-width: 100%;
+    width: 100%;
+    color: var(--font-color);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    position: relative;
+    background-color: #D9D4CC;
+  }
+
 }
