@@ -8,6 +8,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; /* Safari Glättung */
+  -moz-osx-font-smoothing: grayscale;  /* Firefox Glättung */
 }
 
 :root {
@@ -24,10 +26,11 @@
 }
 
 body {
-  font-family: 'League Spartan', serif;
+  font-family: 'League Spartan', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   background-color: var(--background-color);
   min-height: 100vh;
+  -webkit-text-size-adjust: 100%; /* Safari Textzoom verhindern */
 }
 
 ul { list-style: none; }
@@ -56,6 +59,7 @@ section {
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   opacity: 0.95;
   background-color: transparent;
+  -webkit-backface-visibility: hidden; /* Safari rendering bug */
 }
 
 .nav-bar.visible {
@@ -77,6 +81,7 @@ section {
 .nav-bar ul {
   display: flex;
   justify-content: space-evenly;
+  -webkit-overflow-scrolling: touch; /* Safari scrollen bei Mobilgeräten */
 }
 
 .nav-bar ul li {
@@ -96,6 +101,7 @@ section {
 
 .hover-underline-animation {
   position: relative;
+  -webkit-tap-highlight-color: transparent; /* Safari Touch-Highlight */
 }
 
 .hover-underline-animation::before {
@@ -126,6 +132,7 @@ section {
   width: 100%;
   height: auto;
   object-fit: cover;
+  -webkit-transform: translateZ(0); /* Safari Bugfix für object-fit */
 }
 
 .video-overlay-text {
@@ -194,6 +201,7 @@ section {
   object-fit: cover;
   object-position: center;
   display: block;
+  -webkit-transform: translateZ(0); /* Safari rendering fix */
 }
 
 .card-main-content .centered {
@@ -364,6 +372,7 @@ section {
     background: var(--description-color);
     transform: translateX(200%);
     transition: transform 0.5s ease-in-out;
+    -webkit-overflow-scrolling: touch;
   }
 
   body:has(.hamburger.active) .nav-bar ul {
