@@ -6,6 +6,8 @@
     <title>Masterpieß</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href='https://fontawesome.com/icons/triangle-exclamation?f=classic&s=solid' rel='stylesheet'>
+  <link href='https://fontawesome.com/icons/circle-check?f=classic&s=solid' rel='stylesheet'>
   <link rel="icon" href="images/logo_masterpiess_transparent_inverted.png">
   <script defer src="script.js"></script>
 
@@ -81,7 +83,7 @@
 
 <section class="image-text-float-section hidden-left">
   <div class="image-text-float-wrapper">
-    <img src="Images/Muschel.png" alt="Change Symbol" class="float-image">
+    <img src="Images/Ueber_Masterpieß.png" alt="Change Symbol" class="float-image">
     <div class="image-text-float-header">
       <h3>MASTERPIEß CONSULTING IST EINE BOUTIQUE-BERATUNG MIT FOKUS AUF INDIVIDUELLEM CHANGE</h3>
     </div>
@@ -272,8 +274,21 @@
 
       </section>
 
-      <section class="Ueberuns">
+      <section class="contact-formular">
 
+      <h1>Du bist neugierig geworden? Sehr schön. Masterpieß steht für individuelle und passgenaue Beratung. Eine kurze Nachricht oder ein Anruf genügt.</h1>
+<form class="cf" action="https://api.web3forms.com/submit" method="POST">
+  <div class="half left cf">
+    <input type="hidden" name="access_key" value="d2e4f181-8899-4233-b046-9c86c01cac5f">
+    <input type="text" id="input-name" placeholder="Name">
+    <input type="email" id="input-email" placeholder="Email Adress"> 
+    <input type="text" id="input-subject" placeholder="Betreff">
+  </div>
+  <div class="half right cf">
+    <textarea name="message" type="text" id="input-message" placeholder="Nachricht"></textarea>
+  </div>  
+  <input type="submit" value="Submit" id="input-submit">
+</form>
       </section>
     <!-- </section> -->
 
