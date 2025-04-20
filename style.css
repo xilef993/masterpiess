@@ -148,12 +148,13 @@ section {
 }
 
 .video-overlay-text h1 {
-  font-size: 10rem;
+  font-size: 18rem;
   letter-spacing: 9px;
 }
 
 .video-overlay-text p {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
+  font-weight: 500;
 }
 
 /* ========== MAIN CONTENT ========== */
@@ -194,7 +195,8 @@ section {
   height: auto;
   max-width: 900px;
   object-fit: cover;
-  transition: 02s;
+  transition: 0.2s;
+  box-shadow: 2px 5px 16px 0px #806752, 3px 5px 15px 5px rgba(105,105,105,0);
 }
 
 .person-introduction-wrapper .text-content{
@@ -210,12 +212,12 @@ section {
 .person-introduction-wrapper .text-content h2{
   margin-top: 150px;
   margin-bottom: 50px;
-  font-size: 50px;
+  font-size: 5rem;
   color: var(--header-color);
   }
 
 .person-introduction-wrapper .text-content p{
-  font-size: 30px;
+  font-size: 3rem;
   /* padding: 25px; */
   padding-bottom: 25px;
   padding-right: 25px;
@@ -250,6 +252,7 @@ margin-bottom: 1rem;
   display: flex;
   justify-content: right;
   width: 100%;
+  line-height: 4rem;
 }
 
 
@@ -269,6 +272,7 @@ margin-bottom: 1rem;
   margin: 1rem;
   position: relative;
   overflow: hidden;
+  box-shadow: 2px 5px 16px 0px #806752, 3px 5px 15px 5px rgba(105,105,105,0);
 }
 
 .card-main-content {
@@ -369,42 +373,52 @@ margin-top: 10px;
 }
 
 .image-text-float-wrapper {
-  max-width: 60%;
+  max-width: 65%;
   width: 100%;
   min-width: 400px;
   color: var(--font-color);
   font-size: 1.125rem;
-  line-height: 1.5;
   position: relative;
   background-color: #D9D4CC;
   transition: 0.6s;
+  
 }
 
 .float-image {
   float: left;
-  width: 400px;
+  width: 100%;
+  max-width: 450px;
   /* margin: 0 2rem 1rem 0; */
   /* border-radius: 12px; */
   shape-outside: margin-box;
+  
 }
 
 .image-text-float-wrapper img {
-  margin-right: 50px;
-  margin-bottom: 20px;
+  margin-right: 10rem;
+  /* margin-bottom: 20px; */
 }
 
-.image-text-float-wrapper h2 {
+.image-text-float-wrapper h3 {
   text-align: justify;
   color: var(--header-color);
-  padding-top: 50px;
+  padding-top: 10rem;
   transition: 0.6s;
+  font-size: 2.5rem;
+  padding-right: 15rem;
+  line-height: 3.5rem;
+  font-weight: 500;
 }
 
 .image-text-float-wrapper p {
   text-align: justify;
-  padding-right: 50px;
+  padding-top: 25px;
+  padding-right: 15rem;
   padding-left: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 75px;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 300;
 }
 
 /* ========== SCROLL-EFFEKTE ========== */
@@ -519,6 +533,18 @@ margin-top: 10px;
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
+
+
+@media screen and (max-width: 1500px) {
+  .person-introduction-wrapper img{
+    width: 100%;
+    height: auto;
+    max-width: 60vw;
+    object-fit: cover;
+    transition: 02s;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .hamburger { display: block; }
 
@@ -541,6 +567,31 @@ margin-top: 10px;
   body:has(.hamburger.active) .nav-bar ul {
     transform: translateX(0);
   }
+
+  .person-introduction-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .person-introduction-wrapper img {
+    order: 0;
+    max-width: 90vw;
+    margin-bottom: 1rem;
+  }
+
+
+
+  .person-introduction-wrapper .text-content {
+    order: 1;
+    width: 90vw;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .person-introduction-wrapper .text-content h2{
+    margin-top: 45px;
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (max-width: 756px) {
@@ -559,32 +610,15 @@ margin-top: 10px;
   }
 
   .video-overlay-text h1 {
-    font-size: 6rem;
+    font-size: 150rem;
     letter-spacing: 9px;
   }
   
   .video-overlay-text p {
-    font-size: 2.5rem;
+    font-size: 20.5rem;
   }
 
-  .person-introduction-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .person-introduction-wrapper img {
-    order: 0;
-    max-width: 90vw;
-    margin-bottom: 1rem;
-  }
-
-  .person-introduction-wrapper .text-content {
-    order: 1;
-    width: 90vw;
-    padding-left: 0;
-    align-items: center;
-    text-align: center;
-  }
 
 
 } 
