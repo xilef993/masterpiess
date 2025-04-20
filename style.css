@@ -28,6 +28,11 @@
   --font-weight-header: 600;
   --font-weight-text: 300;
   font-size: 10px;
+
+  --circle-size: 25rem;
+  --gap-x: 80px;
+  --gap-y: 40px;
+  --shift-bottom-row: 0px; /* Verschiebung für olympisches Versetzen */
 }
 
 body {
@@ -230,8 +235,96 @@ section {
   font-weight: var(--font-weight-text);
 }
 
+/* ======= Customer value ====== */
+.customer-value {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.customer-value-wrapper {
+  background-image: url("images/Hintergrund.png"); /* Anpassen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-y);
+  min-height: 500px;
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+  /* border: rgb(167, 144, 19) 10px solid; */
+}
+
+.customer-value h1{
+  width: 100%;
+  font-size: 4rem;
+  color: var(--header-color);
+  margin-bottom: 2rem;
+}
+
+.customer-value-wrapper h1{
+  width: 100%;
+  font-size: 5rem;
+  color: var(--font-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: var(--gap-x);
+}
+
+.row-bottom {
+  transform: translateX(var(--shift-bottom-row)); /* versetze zweite Reihe nach rechts */
+}
+
+.value-circle {
+  width: var(--circle-size);
+  height: var(--circle-size); 
+  background-color: #ffead280;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-weight: 600;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.value-circle:hover {
+  transform: scale(1.05);
+}
+
+.value-circle h2{
+  color: var(--font-color);
+  font-size: 2rem;
+  width: 70%;
+  text-align: center;
+}
+
+.value-circle p{
+  margin-top: 1rem;
+  color: var(--font-color);
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: var(--font-weight-text);
+}
 
 
+
+
+
+/* ======= SERVICES ======= */
 
 .services {
   display: flex;
