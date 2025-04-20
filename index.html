@@ -9,6 +9,8 @@
   <link href='https://fontawesome.com/icons/triangle-exclamation?f=classic&s=solid' rel='stylesheet'>
   <link href='https://fontawesome.com/icons/circle-check?f=classic&s=solid' rel='stylesheet'>
   <link rel="icon" href="images/logo_masterpiess_transparent_inverted.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <script defer src="script.js"></script>
 
 </head>
@@ -275,20 +277,44 @@
       </section>
 
       <section class="contact-formular">
+        <h2>Bist du bereit für DEINEN Change?</h2>
+        <h1>Kontakt aufnehmen</h1>
+        <div class="wrapper">
+          <header>Schreib uns eine Nachricht</header>
+          <form action="https://formsubmit.co/masterpiess25@gmail.com" method="POST">
+            
+              <div class="field">
+                <input type="text" name="name" placeholder="Name">
+                <i class='fas fa-user'></i>
+              </div>
+              <div class="field">
+                <input type="text" name="email" placeholder="Emai Adress">
+                <i class='fas fa-envelope'></i>
+              </div>
+            
+            
+              <div class="field">
+                <input type="text" name="phone" placeholder="Telefon">
+                <i class='fas fa-phone-alt'></i>
+              </div>
+            
+            <div class="message">
+              <textarea placeholder="Nachricht" name="message"></textarea>
+              <i class="material-icons">message</i>
+            </div>
+            <div class="button-area">
+              <button type="submit">Nachricht senden</button>
+              <span></span>
+            </div>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+          </form>
+        </div>
+      
+      </section>
 
-      <h1>Du bist neugierig geworden? Sehr schön. Masterpieß steht für individuelle und passgenaue Beratung. Eine kurze Nachricht oder ein Anruf genügt.</h1>
-<form class="cf" action="https://api.web3forms.com/submit" method="POST">
-  <div class="half left cf">
-    <input type="hidden" name="access_key" value="d2e4f181-8899-4233-b046-9c86c01cac5f">
-    <input type="text" id="input-name" placeholder="Name">
-    <input type="email" id="input-email" placeholder="Email Adress"> 
-    <input type="text" id="input-subject" placeholder="Betreff">
-  </div>
-  <div class="half right cf">
-    <textarea name="message" type="text" id="input-message" placeholder="Nachricht"></textarea>
-  </div>  
-  <input type="submit" value="Submit" id="input-submit">
-</form>
+      <section>
+
       </section>
     <!-- </section> -->
 

@@ -106,3 +106,5 @@ const hiddenElementsLeft = document.querySelectorAll(".hidden-left");
 hiddenElementsLeft.forEach((el) => observer.observe(el));
 
 
+// Contact Formular
+
