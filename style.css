@@ -127,7 +127,9 @@ hr { height: 50px; }
 /* ========== SECTIONS ========== */
 section {
   margin-bottom: 200px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ========== NAVIGATION ========== */
@@ -323,8 +325,6 @@ section {
 /* ========== CUSTOMER VALUE ========== */
 .customer-value {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
 }
@@ -552,6 +552,7 @@ section {
 /* ========== FLOAT IMAGE SECTION ========== */
 .image-text-float-section {
   display: flex;
+  align-items: center;
   justify-content: center;
   padding: 1rem;
 }
@@ -727,7 +728,7 @@ form .button-area {
   border-radius: 5px;
   padding: 13px 25px;
   background: var(--header-color);
-  /* transition: background 0.3s ease; */
+  transition: background 0.3s ease;
 }
 
 .button-area button:hover {
@@ -773,51 +774,6 @@ form .button-area {
   color: var(--header-color);
   transition: 0.3s;
 }
-
-
-/* ======== Services Underpage ======= */
-
-
-.service-underpage-header {
-
-  /* width: 80vw; */
-  
-  
-  
-  }
-  .service-underpage-wrapper {
-  
-  /* width: 80vw; */
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 80%;
-   height: 100vh;
-    /* align-items: ; */
-    /* flex-direction: column;
-    flex-wrap: wrap; */
-  
-    margin-top: 10rem;
-    background-color: #806752;
-  
-  }
-  
-  
-  
-  .service-underpage-wrapper img {
-    /* height: 100vh; */
-    width: 50%;
-  
-  }
-  
-  .service-underpage-wrapper .text-content h1{
-    width: 50%;
-  }
-  
-  .service-underpage-wrapper .text-content p{
-    width: 50%;
-  }
-  
 
 /* ========== HAMBURGER MENU ========== */
 .hamburger {
@@ -881,9 +837,123 @@ form .button-area {
 
 
 
+/* ======== Services Underpage ======= */
 
 
 
+
+.subpage .service-underpage-header {
+/* position: relative; */
+/* top: 0; */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  /* align-items: ; */
+  /* flex-direction: column;
+  flex-wrap: wrap; */
+  margin-top: 10rem;
+  
+}
+
+.service-underpage-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  width: 100vw; 
+  
+  background-color: #D9D4CC;
+}
+
+
+.service-underpage-header img {
+  width: 100%;
+
+}
+
+.service-underpage-wrapper .text-content {
+  width: 80%;
+  padding: 5rem;
+}
+.service-underpage-wrapper .text-content h1{
+  width: 80%;
+  margin-bottom: 5rem;
+  font-size: var(--font-size-header);
+  color: var(--header-color);
+}
+
+.service-underpage-wrapper .text-content p{
+  width: 80%;
+  font-size: var(--font-size-text);
+}
+
+/* ========== FOOTER ========== */
+
+.site-footer {
+  background-color: var(--font-color);
+  color: white;
+  padding: 4rem 2rem 2rem 2rem;
+  font-size: 1.4rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-section h2, 
+.footer-section h3 {
+  color: var(--header-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--header-color);
+}
+
+.social-icons a {
+  margin-right: 1rem;
+  color: white;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--header-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  color: #bbb;
+}
 
 
 
