@@ -257,7 +257,7 @@ section {
 }
 
 .customer-value-wrapper {
-  background-image: url("../images/Hintergrund.png"); /* Anpassen */
+  background-image: url("../Images/Hintergrund.png"); /* Anpassen */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
