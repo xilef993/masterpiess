@@ -65,26 +65,21 @@ document.addEventListener("scroll", (event) => {
 
 
 // Hamburger
+// alt
+// const hamburgerMenu = document.querySelector(".hamburger")
 
-const hamburgerMenu = document.querySelector(".hamburger")
-
-hamburgerMenu.addEventListener("click", (event) => {
-  hamburgerMenu.classList.toggle("active");
-  // offScreenMenu.classList.toggle("active");
- // hamburgerMenu.classList.contains("active") ? openRightMenu() : closeRightMenu();
-})
-
-// buttonBook.addEventListener("click", (event) => {
-//   console.log("Booking button was pressed");
+// hamburgerMenu.addEventListener("click", (event) => {
+//   hamburgerMenu.classList.toggle("active");
 // })
+//alt
 
-// function openRightMenu() {
-//   document.querySelector(".menu").style.display = "block";
-// }
+const hamburger = document.querySelector('.hamburger');
 
-// function closeRightMenu() {
-//   document.querySelector(".menu").style.display = "none";
-// }
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  document.body.classList.toggle('menu-open'); // ⬅ Wichtig!
+});
+
 
 // Callback function
 const observer = new IntersectionObserver ((entries) => {
