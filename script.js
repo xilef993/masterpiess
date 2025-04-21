@@ -27,18 +27,43 @@ const listItem = document.querySelector(".nav-bar ul li")
 
 
 
-let prevScrollPos = window.scrollY;
-window.addEventListener("scroll", ()=> {
-  let currScrollpos = window.scrollY;
+// let prevScrollPos = window.scrollY;
+// window.addEventListener("scroll", ()=> {
+//   let currScrollpos = window.scrollY;
 
-  if(currScrollpos > prevScrollPos) {
-    header.style.transform = `translateY(0)`;
+//   if(currScrollpos > prevScrollPos) {
+//     header.style.transform = `translateY(0)`;
+//   } else {
+//     header.style.transform = `translateY(-105%)`;
+//   }
+// })
+
+
+const isSubpage = document.body.classList.contains("subpage");
+
+// Funktion zur Steuerung der Sichtbarkeit
+function updateNavbarVisibility() {
+  const scrollY = window.scrollY;
+
+  if (isSubpage) {
+    // Auf Unterseiten: Navbar immer sichtbar
+    header.classList.add("visible");
   } else {
-    header.style.transform = `translateY(-105%)`;
+    // Auf Startseite: nur sichtbar, wenn gescrollt > 50px
+    if (scrollY > 50) {
+      header.classList.add("visible");
+    } else {
+      header.classList.remove("visible");
+    }
   }
+}
 
+// Beim Scrollen prüfen
+window.addEventListener("scroll", updateNavbarVisibility);
 
-})
+// Direkt beim Laden prüfen
+document.addEventListener("DOMContentLoaded", updateNavbarVisibility);
+
 
 
 document.addEventListener("scroll", (event) => {
@@ -56,11 +81,6 @@ document.addEventListener("scroll", (event) => {
     //  backgroundScroll.style.margin = "0";
 
    }
-
-   
-
-
-
  })
 
 
@@ -83,7 +103,7 @@ hamburger.addEventListener('click', () => {
 
 // Callback function
 const observer = new IntersectionObserver ((entries) => {
-  entries.forEach((entry) => {
+  entries.forEach((entry) => {m
     console.log(entry)
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
