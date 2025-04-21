@@ -108,3 +108,75 @@ hiddenElementsLeft.forEach((el) => observer.observe(el));
 
 // Contact Formular
 
+// const floatingImage = document.querySelector(".floating-fullscreen-image");
+// const wrapper = document.querySelector(".image-text-float-wrapper");
+
+// window.addEventListener("scroll", () => {
+//   const scrollY = window.scrollY;
+//   const sectionTop = wrapper.offsetTop;
+//   const sectionHeight = wrapper.offsetHeight;
+
+//   const startScroll = sectionTop - window.innerHeight / 2; // Start Zoom
+//   const endScroll = sectionTop + 400; // Ende: Bild ist im Laptop
+
+//   const maxScroll = endScroll - startScroll;
+
+//   const offset = scrollY - startScroll;
+//   const progress = Math.min(Math.max(offset / maxScroll, 0), 1);
+
+//   // Standard-Zoom-Out
+//   if (scrollY < endScroll) {
+//     const scale = 1 + 4 * progress;
+//     const translateX = -20 * progress + "vw";
+//     const translateY = -20 * progress + "vh";
+//     floatingImage.style.transform = `scale(${scale}) translate(${translateX}, ${translateY})`;
+//     floatingImage.style.position = "fixed";
+//     floatingImage.style.top = "0";
+//     floatingImage.style.left = "0";
+//   }
+
+//   // Bild bleibt an Ort & Stelle (nach dem Scroll)
+//   if (scrollY >= endScroll) {
+//     floatingImage.style.position = "absolute";
+//     floatingImage.style.top = "300px"; // auf Höhe im Laptop-Bildschirm
+//     floatingImage.style.left = "0";
+//     floatingImage.style.transform = `scale(5) translate(-20vw, -20vh)`;
+//   }
+
+//   // Bonus: Hochscrollen → Zoomt größer als 5x (nach oben)
+//   if (scrollY < startScroll) {
+//     const reverseProgress = (startScroll - scrollY) / maxScroll;
+//     const scale = 1 + 4 + reverseProgress * 2; // mehr als 5x
+//     const translateX = -20 - reverseProgress * 10;
+//     const translateY = -20 - reverseProgress * 10;
+//     floatingImage.style.transform = `scale(${scale}) translate(${translateX}vw, ${translateY}vh)`;
+//     floatingImage.style.position = "fixed";
+//     floatingImage.style.top = "0";
+//     floatingImage.style.left = "0";
+//   }
+// });
+
+const floatingImage = document.querySelector(".floating-fullscreen-image");
+const wrapper = document.querySelector(".image-text-float-wrapper");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  const sectionTop = wrapper.offsetTop;
+  const sectionHeight = wrapper.offsetHeight;
+  console.log(scrollY)
+
+});
+
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Section-Ende ist erreicht!");
+    }
+  });
+}, {
+  root: null,
+  threshold: 1.0
+});
+
+const section = document.querySelector(".image-text-float-wrapper");
+observer.observe(section);

@@ -100,6 +100,7 @@ section {
   font-size: xx-large;
   color: var(--header-color);
   padding-left: 25px;
+  font-weight: var(--font-weight-header);
 }
 
 .nav-bar ul {
@@ -562,6 +563,33 @@ color: var(--header-color);
 }
 
 
+
+.fullscreen-transition-container {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 300px;
+  height: 180px;
+  overflow: hidden;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.floating-fullscreen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: top left;
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+  z-index: 5;
+}
+
+
+
+
+
+
 /* ======= Contact Formular ======= */
 
 .contact-formular {
@@ -574,14 +602,14 @@ color: var(--header-color);
 }
 
 .contact-formular h1 {
-  font-size: var(--font-size-header);
-  margin-bottom: 5rem  ;
+  font-size: 6rem;
+  margin: 2.5rem  ;
 }
 
 .contact-formular h2 {
-  font-size: var(--font-size-text);
+  font-size: 2.5rem;
   color: var(--header-color);
-  margin: 2.5rem;
+  margin-bottom: 5rem;
 }
 
 .contact-formular .wrapper{
@@ -594,7 +622,7 @@ color: var(--header-color);
   background-color:  white;
   box-shadow: 2px 5px 16px 0px #806752, 3px 5px 15px 5px rgba(105,105,105,0);
   min-width: 35rem;
-  width: 30vw;
+  width: 35vw;
   height: 650px;
   /* transform: translateY(5%); */
 
@@ -610,7 +638,7 @@ color: var(--header-color);
   box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
 } */
 .wrapper header{
-  font-size: 22px;
+  font-size: 2rem;
   font-weight: 600;
   padding: 20px 30px;
   border-bottom: 1px solid #ccc;
@@ -700,7 +728,7 @@ form .button-area{
   font-size: 18px;
   width: 100%;
   cursor: pointer;
-  /* border-radius: 5px; */
+  border-radius: 5px;
   padding: 13px 25px;
   background: var(--header-color);
   transition: background 0.3s ease;
