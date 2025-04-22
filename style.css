@@ -423,7 +423,7 @@ section {
 .services .introduction-text .headlines {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -445,6 +445,7 @@ section {
   line-height: 4rem;
   font-size: var(--font-size-text);
   font-weight: var(--font-weight-text);
+  text-align: left;
 }
 
 .services .introduction-text p strong{
@@ -612,18 +613,19 @@ section {
 }
 
 .contact-formular h1 {
-  font-size: 6rem;
+  font-size: var(--font-size-header);
+  
+  color: var(--header-color);
   margin: 2.5rem;
 }
 
 .contact-formular h2 {
-  font-size: 2.5rem;
-  color: var(--header-color);
+  font-size: 2rem;
   margin-bottom: 5rem;
 }
 
 .contact-formular .wrapper {
-  padding-top: 2.5rem;
+  /* padding-top: 2.5rem; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -677,6 +679,7 @@ form .message textarea {
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  /* font-family: 'League Spartan'; */
   outline: none;
 }
 
@@ -851,39 +854,76 @@ form .button-area {
   /* align-items: ; */
   /* flex-direction: column;
   flex-wrap: wrap; */
-  margin-top: 10rem;
+  margin-top: 7rem;
   
 }
 
 .service-underpage-wrapper {
   display: flex;
   justify-content: center;
-  height: 80vh;
+  align-items: stretch;
+  height: 80%;
   width: 100vw; 
-  
-  background-color: #D9D4CC;
+  background-color: white; /*#D9D4CC; */
 }
+
 
 
 .service-underpage-header img {
-  width: 100%;
-
+  /* width: auto; */
+  /* height: auto; */
+  /* display: inline-block; */
+  flex: 0 0 40%;  
+  object-fit: cover;
+  transition: 0.2s;
+  overflow: hidden;  
+  /* display: inline-block; */
 }
 
 .service-underpage-wrapper .text-content {
-  width: 80%;
+  /* width: 100%; */
+  /* flex: 1 1 auto;   */
+  box-sizing: content-box;
+  max-width: 60vw;
   padding: 5rem;
+  padding-right: 8rem;
+  /* box-sizing: border-box;
+  white-space: nowrap; */
+  /* display: inline-block; */
 }
 .service-underpage-wrapper .text-content h1{
-  width: 80%;
-  margin-bottom: 5rem;
-  font-size: var(--font-size-header);
+  width: 100%;
+  margin-bottom: 2.5rem;
+  font-size: 4rem;
+  font-weight: 400;
   color: var(--header-color);
+}
+.service-underpage-wrapper .text-content h2{
+  width: 100%;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: var(--font-color);
+  letter-spacing: 0.5rem;
 }
 
 .service-underpage-wrapper .text-content p{
-  width: 80%;
-  font-size: var(--font-size-text);
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.service-underpage-wrapper .text-content strong {
+  color: var(--header-color);
+}
+.service-underpage-wrapper .text-content ul{
+  /* padding-left: 1.5rem; */
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  list-style-type: none; /* Alternativen: circle, square, none */
+}
+.service-underpage-wrapper .text-content ul li:before {
+  content: '✓  ';
+  color: var(--header-color);
 }
 
 /* ========== FOOTER ========== */
